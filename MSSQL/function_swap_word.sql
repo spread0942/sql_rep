@@ -1,4 +1,4 @@
-USE [serviceDBCenter]
+USE [db]
 GO
 
 /**
