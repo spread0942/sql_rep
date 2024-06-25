@@ -30,3 +30,30 @@ END
 GO
 
 SELECT [dbo].[function_convert_in_bit] ( 49280 )
+GO
+
+/*
+ * Convert a number in its binary value (ChatGPT solution)
+ *
+ */
+
+CREATE FUNCTION dbo.[int_to_binary_string](@intValue INT)
+RETURNS VARCHAR(32)
+AS
+BEGIN
+    DECLARE @binaryString VARCHAR(32) = ''
+    DECLARE @bit INT
+    DECLARE @value INT = @intValue
+
+    WHILE @value > 0
+    BEGIN
+        SET @bit = @value % 2
+        SET @binaryString = CAST(@bit AS VARCHAR(1)) + @binaryString
+        SET @value = @value / 2
+    END
+
+    RETURN @binaryString
+END
+GO
+	
+SELECT dbo.IntToBinaryString(49280)
