@@ -29,7 +29,8 @@ BEGIN
 END
 GO
 
-SELECT [dbo].[function_convert_in_bit] ( 49280 )
+SELECT *
+FROM [dbo].[function_convert_in_bit] ( 49280 ) AS tmp
 GO
 
 /*
