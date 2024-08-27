@@ -57,4 +57,4 @@ BEGIN
 END
 GO
 	
-SELECT dbo.IntToBinaryString(49280)
+SELECT dbo.[int_to_binary_string](49280)
